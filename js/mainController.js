@@ -13,7 +13,7 @@ angular
     '$rootScope',
     'FirebaseService',
     'ModalService',
-    'Features',
+    'FEATURES',
     function(
       $scope,
       $filter,
@@ -23,7 +23,7 @@ angular
       $rootScope,
       firebaseService,
       modalService,
-      features
+      FEATURES
     ) {
       $scope.loading = true;
       $scope.messageTypes = utils.messageTypes;
@@ -32,7 +32,7 @@ angular
         name: '',
         text_editing_is_private: true
       };
-      $scope.features = features;
+      $scope.features = FEATURES;
       $scope.userId = $window.location.hash.substring(1) || '';
       $scope.searchParams = {};
       $window.location.search
